@@ -1,18 +1,10 @@
-"""
-Quick test script to confirm the Anthropic API key and SDK are working.
-This makes one API call and asks for a structured (JSON) response,
-matching the Day-0 pre-work requirement in the training plan.
-"""
-
 import os
 import json
 from anthropic import Anthropic
 from dotenv import load_dotenv
 
-# Load variables from .env into the environment
 load_dotenv()
 
-# The SDK automatically picks up ANTHROPIC_API_KEY from the environment
 client = Anthropic()
 
 def test_connection():
