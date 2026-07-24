@@ -7,9 +7,6 @@ from llm_provider import generate
 CHROMA_DB_DIR = "data/chroma_db"
 COLLECTION_NAME = "it_knowledge_base"
 
-# Chroma's default embedding function returns *distances* (lower = more
-# similar) rather than similarity scores. This threshold is a starting
-# point per the design doc — expect to tune it once you run the eval set.
 MAX_DISTANCE_THRESHOLD = 1.3
 
 TOP_K = 3  # how many chunks to retrieve per question
