@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "question": "How often do I need to change my password?",
+    "expect_refusal": false,
+    "expected_sources": ["password_reset_policy.md"],
+    "notes": "Should find the 90-day password policy."
+  },
+  {
+    "id": 2,
+    "question": "My VPN login isn't working, what should I check first?",
+    "expect_refusal": false,
+    "expected_sources": ["vpn_setup_guide.md", "password_reset_policy.md"],
+    "notes": "Tests whether it correctly links VPN auth issues to the password system, possibly citing both docs."
+  },
+  {
+    "id": 3,
+    "question": "How long does it take to get approval for new software that isn't already used at the company?",
+    "expect_refusal": false,
+    "expected_sources": ["software_request_process.md"],
+    "notes": "Should find the 5-10 business day security review timeline for unapproved software."
+  },
+  {
+    "id": 4,
+    "question": "If I switch teams, does my old system access get removed automatically?",
+    "expect_refusal": false,
+    "expected_sources": ["access_request_policy.md"],
+    "notes": "Should correctly say NO, it does not happen automatically, and explain the process."
+  },
+  {
+    "id": 5,
+    "question": "What should I do if my printer isn't showing up as online?",
+    "expect_refusal": false,
+    "expected_sources": ["troubleshooting_faq.md"],
+    "notes": "Should find the printer troubleshooting steps."
+  },
+  {
+    "id": 6,
+    "question": "What is the company's policy on parental leave?",
+    "expect_refusal": true,
+    "expected_sources": [],
+    "notes": "Not IT-related at all, not in knowledge base. Should refuse cleanly."
+  },
+  {
+    "id": 7,
+    "question": "How much is the annual budget for the IT department?",
+    "expect_refusal": true,
+    "expected_sources": [],
+    "notes": "IT-adjacent phrasing but not actually covered in any doc. Tests refusal on topic-adjacent but out-of-scope questions."
+  },
+  {
+    "id": 8,
+    "question": "Can I get a company laptop repaired if I drop it, and who pays for that?",
+    "expect_refusal": true,
+    "expected_sources": [],
+    "notes": "Onboarding doc mentions receiving a laptop but nothing covers repairs/damage. Tests refusal on a question that's adjacent to real content but not actually answered."
+  }
+]
